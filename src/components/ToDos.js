@@ -1,7 +1,10 @@
 import React from 'react'
-
-export default function ToDos() {
+import ToDoItems from './ToDoItems'
+export default function ToDos({tasks}) {
   return (
-    <div>ToDos</div>
+    <div className='container border'>
+      <h3>List of Tasks:</h3>
+      {tasks.map(task => <ToDoItems task={task} />)}
+    </div>
   )
 }
